@@ -756,7 +756,7 @@ fn make_run(context: &Context) -> proc_macro2::TokenStream {
             #output
         }
 
-        fn run(self) -> #output_ty_default {
+        pub fn run(self) -> #output_ty_default {
             self.run_with_hasher::<::std::collections::hash_map::RandomState>()
         }
     }
